@@ -47,21 +47,17 @@ class SpotifyWidget extends StatelessWidget {
             child: Stack(
               alignment: Alignment.center,
               children: [
-                // The Album Image
                 ClipRRect(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.network(
-                    // Using a placeholder image that fits the dark, textured vibe.
-                    // In a real app, this would be the actual album art URL.
-                    'https://i.redd.it/aihrkl0c69rd1.jpeg',
+                  child: Image.asset(
+                    'assets/image_640283.jpeg',
                     height: 300,
                     width: 300,
                     fit: BoxFit.cover,
-                    // Darken image slightly to make text pop
                     color: Colors.black.withOpacity(0.2),
                     colorBlendMode: BlendMode.darken,
                   ),
-                ),  
+                ),
               ],
             ),
           ),
