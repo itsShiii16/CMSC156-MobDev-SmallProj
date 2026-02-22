@@ -110,7 +110,7 @@ class SpotifyWidget extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
                   child: const LinearProgressIndicator(
-                    value: 0.35, // Approx 1:31 out of total time
+                    value: 0.35, // Approx 1:31 
                     backgroundColor: Colors.white24,
                     valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                     minHeight: 5,
