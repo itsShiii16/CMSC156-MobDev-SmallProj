@@ -11,9 +11,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Lab Exercise #4',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
-        // Global styling for all text fields to look clean
+        // Global styling for all text fields = consistency
         inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.0),
@@ -38,14 +39,14 @@ class _FormScreenState extends State<FormScreen> {
   final _formKey = GlobalKey<FormState>();
 
   // Controllers to capture user input
-  final _nameController = TextEditingController(text: 'mcLOVIN');
-  final _heightController = TextEditingController(text: '177.8');
+  final _nameController = TextEditingController(text: 'sherwin');
+  final _heightController = TextEditingController(text: '165.5');
   final _weightController = TextEditingController(text: '68.03');
   final _hairController = TextEditingController(text: 'brown');
   final _eyesController = TextEditingController(text: 'brown');
-  final _cityController = TextEditingController(text: 'Honolulu');
+  final _cityController = TextEditingController(text: 'Iloilo City');
   final _addressController = TextEditingController(
-      text: '892 Momona St. Honolulu, Hi 96820');
+      text: 'De Leon St, Mandurriao Iloilo City');
 
   // For the Dropdown
   String _selectedSex = 'Male';
@@ -247,7 +248,7 @@ class IdCardDialog extends StatelessWidget {
               Row(
                 children: [
                   const Text(
-                    'HAWAII',
+                    'PHILIPPINE',
                     style: TextStyle(
                       color: Colors.blue,
                       fontWeight: FontWeight.w900,
@@ -257,7 +258,7 @@ class IdCardDialog extends StatelessWidget {
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    'DRIVER LICENSE',
+                    'NATIONAL ID',
                     style: TextStyle(
                       color: Colors.grey.shade800,
                       fontSize: 16,
@@ -281,7 +282,7 @@ class IdCardDialog extends StatelessWidget {
                     ),
                     // Using a network image for McLovin. In a real app, use Image.asset
                     child: Image.network(
-                      'https://upload.wikimedia.org/wikipedia/en/thumb/0/03/McLovin.jpg/220px-McLovin.jpg',
+                      'https://cdn-images.dzcdn.net/images/cover/3abe03841174a6a3f7d8e32302eea6f8/500x500.jpg',
                       fit: BoxFit.cover,
                       errorBuilder: (context, error, stackTrace) => 
                           const Center(child: Icon(Icons.person, size: 50)),
